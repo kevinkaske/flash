@@ -1,10 +1,10 @@
 <?
 function flash($type, $message) {
-	// creates the flash holder, if not defined yet
+	// create flash holder
 	if(!isset($_SESSION['flash'])) {
 		$_SESSION['flash'] = array();
 	}
-	// sets the message
+	// set the message
 	if(!isset($_SESSION['flash'][$type])) {
 		$_SESSION['flash'][$type] = '';
 	}
