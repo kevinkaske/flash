@@ -1,4 +1,4 @@
-<?
+<?php
 function flash($type, $message) {
 	// create flash holder
 	if(!isset($_SESSION['flash'])) {
