@@ -19,7 +19,9 @@ function unsetFlash() {
 
 function getFlash($type) {
 	if(isset($_SESSION['flash']) && isset($_SESSION['flash'][$type])) {
-		return $_SESSION['flash'][$type];
+		$return_flash = $_SESSION['flash'][$type];
+		$_SESSION['flash'][$type] = null;
+		return $return_flash;
 	}
 	
 	return null;
