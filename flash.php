@@ -29,6 +29,10 @@ function isFlashMessage(){
 	return isset($_SESSION['flash']);
 }
 
+function isFlashMessage($type){
+	return isFlashMessageType($type);
+}
+
 function isFlashMessageType($type){
 	return isset($_SESSION['flash'][$type]);
 }
